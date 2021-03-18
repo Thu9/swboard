@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+	
+	<bean id="swboardVO" class="com.swapp.vo.SwboardVO"/>
+	<bean id="swboardList" class="com.swapp.vo.SwboardList"/>
+	
+	<bean id="select" class="com.swapp.service.SelectService"/>
+	<bean id="insert" class="com.swapp.service.InsertService"/>
+	<bean id="increment" class="com.swapp.service.IncrementService"/>
+	<bean id="contentView" class="com.swapp.service.ContentViewService"/>
+	<bean id="delete" class="com.swapp.service.DeleteService"/>
+	<bean id="update" class="com.swapp.service.UpdateService"/>
+	<bean id="reply" class="com.swapp.service.ReplyService"/>
+
+	<bean id="swboardDAO" class="com.swapp.dao.SwboardDAO"/>
+</beans>
