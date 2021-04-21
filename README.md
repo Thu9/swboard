@@ -21,3 +21,6 @@
 ![](md_resources/swbard_model.jpg)
 
 ----------------------------------------------------------------------------
+![](md_resources/index.gif)
+![](md_resources/slide.gif)
+![](md_resources/hover.gif)
