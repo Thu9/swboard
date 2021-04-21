@@ -35,14 +35,14 @@
 public class SwboardList {
 
 	private ArrayList<SwboardVO> list = new ArrayList<SwboardVO>();
-	private int pageSize = 10;
-	private int totalCount = 0;
-	private int totalPage = 0;
-	private int currentPage = 1;
-	private int startNo= 0;
-	private int endNo= 0;
-	private int startPage= 0;
-	private int endPage= 0;
+	private int pageSize = 10;	// 화면 하단에 보여지는 페이지의 개수
+	private int totalCount = 0;	// 전체 게시글 수 
+	private int totalPage = 0;	// 전체 페이지 수
+	private int currentPage = 1;	// 현재 페이지
+	private int startNo= 0;		// 게시글 시작 번호
+	private int endNo= 0;		// 게시글 끝 번호
+	private int startPage= 0;	// 게시글 번호에 따라 보여지는 페이지의 시작 번호
+	private int endPage= 0;		// 게시글 번호에 따라 보여지는 페이지의 마지막 번호
 
 	public SwboardList() { }
 	
@@ -64,4 +64,5 @@ public class SwboardList {
 		endPage = startPage + 9;
 		endPage = endPage > totalPage ? totalPage : endPage;
 	}
+// getter, setter, toString 생략
 ~~~
