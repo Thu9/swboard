@@ -81,4 +81,6 @@ public class SwboardList {
 -----------------------------------------------------------
 > User Method
 ## Insert() 회원가입
+![](md_resources/register.gif)
 ## Search() 검색
+![](md_resources/searching.gif)
