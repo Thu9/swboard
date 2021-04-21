@@ -23,9 +23,9 @@
 ----------------------------------------------------------------------------
 ## 메인 화면
 ![](md_resources/index.gif)
-
+## 메인 베너
 ![](md_resources/slide.gif)
-
+## 메인 주요서비스
 ![](md_resources/hover.gif)
 
 ----------------------------------------------------------------------------
@@ -66,3 +66,19 @@ public class SwboardList {
 	}
 // getter, setter, toString 생략
 ~~~
+---------------------------------------------------------
+> Board Method 
+## selectList() 전체 게시글 가져오기
+![](md_resources/paging.gif)
+## insert() 글쓰기
+![](md_resources/insert.gif)
+## update() 수정하기
+![](md_resources/update.gif)
+## delete() 삭제하기
+![](md_resources/delete.gif)
+## increment() 추천 수 올리기
+![](md_resources/update.gif)
+-----------------------------------------------------------
+> User Method
+## Insert() 회원가입
+## Search() 검색
