@@ -5,14 +5,21 @@
 <meta charset="UTF-8">
 <title>Swboard. 게시글 작성</title>
 
-<link rel="stylesheet" type="text/css" href="resources/css/insert.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <!-- 네이버 스마트 에디터2 --> 
 <script type="text/javascript" src="resources/smartEditor/js/service/HuskyEZCreator.js" charset="utf-8"></script>
 <!-- notce_write.js -->
 <script type="text/javascript" src="resources/js/notce_write.js"></script>
+
+<style type="text/css">
+	body {
+	color: #363636;
+	font-size: 15px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+</style>
+	
 
 </head>
 <body>

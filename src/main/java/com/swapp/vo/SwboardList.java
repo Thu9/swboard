@@ -16,7 +16,7 @@ public class SwboardList {
 
 	public SwboardList() { }
 	
-//	pageSize, totalCount, currentPage를 넘겨받아 페이지 작업에 사용할 8개의 변수를 초기화 시키는 메소드
+//	페이지 작업에 사용할 8개의 변수를 초기화 시키는 메소드
 	public void initSwboardList(int pageSize, int totalCount, int currentPage) {
 		this.pageSize = pageSize;
 		this.totalCount = totalCount;

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* 풋터 css */
+footer .top { background: #383f43; }
+footer .top > div { width: 1180px; margin: 0 auto; padding: 13px 0;}
+footer .top > div ul { float: left; }
+footer .top > div ul li { float: left; position: relative; padding: 0 19px 0 0; }
+footer .top > div ul li:after { content: ""; position: absolute; right: 9px; top: 50%; width: 1px; height: 8px; 
+	margin-top: -4px; background: #70767a; }
+footer .top > div ul li:last-child:after { display: none; }
+footer .top > div ul li a { color: #fff; font-size: 14px; line-height: 45px; }
+footer .top > div > div { float: right; }
+footer .top > div > div p { display: inline-block; width: 242px; height: 45px;
+	background: #2a3033; color: #fff; text-align: center; line-height: 45px; font-size: 16px; }
+footer .top > div > div p strong { padding: 0 0 0 15px; }
+footer .top > div > div select { padding: 0 0 0 21px; width: 200px; height: 43px; color: #191919; 
+font-size: 14px; box-sizing: border-box; border: none; vertical-align: 1px; }
+
+footer .btm { padding: 40px 0 44px; background: #4c5459; text-align: center; }
+footer .btm p { display: inline-block; width: 131px; height: 51px; color: transparent; 
+	background: url(../images/sp_com.png) no-repeat -150px 0; }
+footer .btm ul { padding: 32px 0 14px; }	
+footer .btm li { display: inline-block; position: relative; padding: 0 10px; color: #fff; font-size: 14px; }
+footer .btm li:after { content: ""; position: absolute; right: 0; top: 50%; margin-top: -4px; 
+	width: 1px; height: 8px; background: #70767a; }
+footer .btm li:last-child:after { display: none; }
+footer .btm address { font-size: 14px; color: #fff; }

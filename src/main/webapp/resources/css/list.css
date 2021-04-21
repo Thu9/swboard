@@ -1,21 +1,21 @@
 @charset "utf-8";
 
-body {
+body .list {
 	color: #363636;
 	font-size: 16px;
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
-a { color: #363636;
-	text-decoration: none; }
-a:hover { text-decoration: underline; } 
-
-.pageBar {
-	    padding-top: 30px;
-}
+.list { width: 1200px; height: 800px; margin: 50px auto; }
+.list  a { color: #363636;	text-decoration: none; }
+.list  a:hover { text-decoration: underline; } 
+.list .content td:nth-child(2) { text-indent: 15px; }
 
 
-.pageButton1, .pageButton2 {
+.pageBar { height: 60px; line-height: 60px; padding: 0 15px; float: center;}
+.pageBar span { float: right; }
+.pageButton1, 
+.pageButton2 {
 	font-family: Tahoma;
 	display: inline-block;
 	vertical-align: middle;
@@ -23,21 +23,8 @@ a:hover { text-decoration: underline; }
 	padding: 0 15px 0 15px;
 }
 
-.pageButton2 {
-	text-decoration: none; 
-}
- strong {
- 	color: #ff5400;
-	text-decoration: underline;
-}
+.pageButton2 { text-decoration: none; }
+.list strong { color: #ff5400; text-decoration: underline; }
 
-.writeButton {
-	width: 150px;
-    height: 30px;
-    padding-top: 11px;
-    display: inline-block;
-    color: #fff;
-    text-align: center;
-    background-color: #f56800;
-    border-radius: 3px;
-}
+.list .writeButton { width: 150px; height: 30px; padding: 8px 0; display: inline-block;
+    color: #fff; text-align: center; background-color: #f56800; border-radius: 3px; margin-right: 20px; }

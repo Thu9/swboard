@@ -7,12 +7,10 @@
 		values (swboard_idx_seq.nextval, #{name}, #{subject}, #{content}, swboard_idx_seq.currval, 0, 0)
 	</insert>
 	
-	<!-- 테이블에 저장된 전체 글의 개수를 얻어온다. -->
 	<select id="selectCount" resultType="int">
 		select count(*) from swboard
 	</select>
 	
-	<!-- 1페이지 분량의 글 목록을 얻어온다. -->
 	<select id="selectList" parameterType="java.util.HashMap" resultType="vo">
 		<![CDATA[
 			select * from (
@@ -23,32 +21,26 @@
 		]]>
 	</select>
 	
-	<!-- 조회수를 증가시킨다. -->
 	<update id="increment" parameterType="int">
 		update swboard set hit = hit + 1 where idx = #{idx}
 	</update>
 	
-	<!-- 글 1건을 얻어온다. -->
 	<select id="selectByIdx" parameterType="int" resultType="vo">
 		select * from swboard where idx = #{idx}
 	</select>
 	
-	<!-- 글 1건을 삭제한다. -->
 	<delete id="delete" parameterType="int">
 		delete from swboard where idx = #{idx}
 	</delete>
 	
-	<!-- 글 1건을 수정한다. -->
 	<update id="update" parameterType="vo">
 		update swboard set subject = #{subject}, content = #{content} where idx = #{idx}
 	</update>
 	
-	<!-- 답글이 삽입될 위치를 확보하기 위해 조건에 만족하는 seq를 1씩 증가시킨다. -->
 	<update id="replyIncrement" parameterType="java.util.HashMap">
 		update swboard set seq = seq + 1 where ref = #{ref} and seq >= #{seq}
 	</update>
 	
-	<!-- 답글을 저장한다. -->
 	<insert id="replyInsert" parameterType="com.swapp.vo.SwboardVO">
 		insert into swboard (idx, name, subject, content, ref, lev, seq) 
 		values (swboard_idx_seq.nextval, #{name}, #{subject}, #{content}, #{ref}, #{lev}, #{seq})

@@ -1,4 +1,4 @@
-package com.swapp.swboard;
+package com.swapp.swboard.controller;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 

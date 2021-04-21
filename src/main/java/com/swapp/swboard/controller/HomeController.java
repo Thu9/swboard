@@ -1,4 +1,4 @@
-package com.swapp.swboard;
+package com.swapp.swboard.controller;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -23,10 +23,10 @@ public class HomeController {
 	@Autowired
 	public SqlSession sqlSession;
 	
-	// 게시판 페이지
-	@RequestMapping("/")
+	// 첫 페이지
+	@RequestMapping(value = { "/", "/index"} )
 	public String home(Locale locale, Model model) {
-		return "redirect:list";
+		return "index";
 	}
 	
 	// 게시글 입력 페이지
@@ -35,6 +35,7 @@ public class HomeController {
 		return "insert";
 	}
 	
+	// 게시글 입력 메소드
 	@RequestMapping("/insertOK")
 	public String insertOK(HttpServletRequest request, Model model) {
 		MybatisDAO mapper = sqlSession.getMapper(MybatisDAO.class);
@@ -48,7 +49,7 @@ public class HomeController {
 		mapper.insert(swboardVO);
 		return "redirect:list";
 	}
-	
+	// 게시판 페이지
 	@RequestMapping("/list")
 	public String list(HttpServletRequest request, Model model) {
 		MybatisDAO mapper = sqlSession.getMapper(MybatisDAO.class);
@@ -74,6 +75,7 @@ public class HomeController {
 		return "list";
 	}
 	
+	// 조회수 증가 메소드
 	@RequestMapping("/increment")
 	public String increment(HttpServletRequest request, Model model) {
 		MybatisDAO mapper = sqlSession.getMapper(MybatisDAO.class);
@@ -86,6 +88,7 @@ public class HomeController {
 		return "redirect:contentView";
 	}
 	
+	// 게시글 페이지
 	@RequestMapping("/contentView")
 	public String contentView(HttpServletRequest request, Model model) {
 		MybatisDAO mapper = sqlSession.getMapper(MybatisDAO.class);
@@ -103,6 +106,7 @@ public class HomeController {
 		return "contentView";
 	}
 	
+	// 게시글 삭제 메소드
 	@RequestMapping("/delete")
 	public String delete(HttpServletRequest request, Model model) {
 		MybatisDAO mapper = sqlSession.getMapper(MybatisDAO.class);
@@ -114,6 +118,7 @@ public class HomeController {
 		return "redirect:list";
 	}
 	
+	// 게시글 수정 메소드
 	@RequestMapping("/update")
 	public String update(HttpServletRequest request, Model model, SwboardVO swboardVO) {
 		MybatisDAO mapper = sqlSession.getMapper(MybatisDAO.class);
@@ -122,6 +127,7 @@ public class HomeController {
 		return "redirect:list";
 	}
 	
+	// 게시글 댓글 메소드
 	@RequestMapping("/reply")
 	public String reply(HttpServletRequest request, Model model) {
 		MybatisDAO mapper = sqlSession.getMapper(MybatisDAO.class);
@@ -138,10 +144,9 @@ public class HomeController {
 		return "reply";
 	}
 	
+	// 게시글 댓글 입력 메소드
 	@RequestMapping("/replyInsert")
 	public String replyInsert(HttpServletRequest request, Model model, SwboardVO swboardVO) {
-		System.out.println("컨트롤러의 replyInsert() 메소드 실행");
-
 		MybatisDAO mapper = sqlSession.getMapper(MybatisDAO.class);
 		
 		swboardVO.setLev(swboardVO.getLev() + 1);

@@ -5,7 +5,6 @@
 	
 	<bean id="swboardVO" class="com.swapp.vo.SwboardVO"/>
 	<bean id="swboardList" class="com.swapp.vo.SwboardList"/>
-	
 	<bean id="select" class="com.swapp.service.SelectService"/>
 	<bean id="insert" class="com.swapp.service.InsertService"/>
 	<bean id="increment" class="com.swapp.service.IncrementService"/>
@@ -13,6 +12,6 @@
 	<bean id="delete" class="com.swapp.service.DeleteService"/>
 	<bean id="update" class="com.swapp.service.UpdateService"/>
 	<bean id="reply" class="com.swapp.service.ReplyService"/>
-
 	<bean id="swboardDAO" class="com.swapp.dao.SwboardDAO"/>
+	
 </beans>

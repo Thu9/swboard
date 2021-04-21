@@ -13,8 +13,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
 <body>
-
-	<table width="1000" height="800" align="center" border="1" cellpadding="10" cellspacing="0">
+	<!-- header include -->
+	<jsp:include page="include/header.jsp" />
+	
+	<table class="list" width="1200" height="800" align="center" border="1" cellpadding="10" cellspacing="0">
 		<tr><th colspan="5">Swboard.</th></tr>
 		<tr>
 			<td colspan="5" align="right">
@@ -23,9 +25,9 @@
 		</tr>
 		<tr>
 			<th width="80">글번호</th>
-			<th width="620">제목</th>
-			<th width="100">이름</th>
-			<th width="120">작성일</th>
+			<th width="760">제목</th>
+			<th width="130">이름</th>
+			<th width="150">작성일</th>
 			<th width="80">조회수</th>
 		</tr>
 	
@@ -42,7 +44,7 @@
 		
 		<c:if test="${list.size() != 0}">
 		<c:forEach var="vo" items="${list}">
-		<tr>
+		<tr class="content">
 			<td align="center">${vo.idx}</td>
 			<td>
 				<c:set var="subject" value="${fn:replace(fn:trim(vo.subject), '<', '&lt;')}"/>
@@ -50,7 +52,7 @@
 				
 				<c:if test="${vo.lev > 0}">
 				<c:forEach var="i" begin="1" end="${vo.lev}" step="1">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;
 				</c:forEach>
 				<img src="images/reply.png"/>&nbsp;
 				</c:if>
@@ -103,12 +105,9 @@
 				<c:forEach var="i" begin="${swboardList.startPage}" end="${swboardList.endPage}" step="1">
 					<c:if test="${swboardList.currentPage == i}">
 						<strong class="pageButton1">${i}</strong>
-						<!-- <input class="button button1" type="button" value="${i}" disabled="disabled"/>  -->
 					</c:if>
 					<c:if test="${swboardList.currentPage != i}">
 						<a class="pageButton2" href='?currentPage=${i}' title="${i}페이지로">${i}</a>
-						<!-- <input class="button button2" type="button" value="${i}" onclick="location.href='?currentPage=${i}'"
-							title="${i}페이지로"/>  -->
 					</c:if>
 				</c:forEach>
 				
@@ -137,7 +136,9 @@
 			</td>
 		</tr>
 	</table>
-
+	
+	<!-- footer include -->
+	<jsp:include page="include/footer.jsp" />
 </body>
 </html>
 

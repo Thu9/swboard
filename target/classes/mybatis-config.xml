@@ -6,4 +6,6 @@
 		<typeAlias alias="vo" type="com.swapp.vo.SwboardVO"/>
 	</typeAliases>
 	
+	
+	
 </configuration>
