@@ -80,7 +80,7 @@ public class SwboardList {
 ![](md_resources/update.gif)
 -----------------------------------------------------------
 > User Method
-## Insert() 회원가입
+## Register() 회원가입
 ![](md_resources/register.gif)
 ## Search() 검색
 ![](md_resources/searching.gif)
